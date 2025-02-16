@@ -20,6 +20,7 @@ selected_page = st.selectbox("Select a page:", list(pages.keys()))
 
     # 페이지 이동 처리
 if pages[selected_page]:  # 선택된 페이지가 None이 아닐 경우
+    st.session_state.friend_chat_history = []
     st.switch_page(pages[selected_page])  # switch_page로 이동
 
 # 사용자 데이터베이스 JSON 파일 경로
@@ -99,6 +100,8 @@ Your task is to prioritize the User's tone, expressions, and style in every resp
 # Streamlit 상태 초기화
 if "friend_chat_history" not in st.session_state:
     st.session_state.friend_chat_history = []
+    
+
 if "friend_conversation_done" not in st.session_state:
     st.session_state.friend_conversation_done = False
 

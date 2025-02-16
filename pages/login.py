@@ -14,6 +14,15 @@ if os.path.exists(pages_dir):
 else:
     print("`pages/` 디렉토리를 찾을 수 없습니다.")
 
+# List of pages
+pages = {
+    "🎡 choose the page": None,
+    "🏠 home": "home.py",
+}
+
+# Dropdown to select the page
+selected_page = st.selectbox("Select a page:", list(pages.keys()))
+
 # 사용자 데이터베이스 JSON 파일 경로
 USER_DATA_FILE = "user_data.json"
 # 사용자 데이터베이스(간단히 딕셔너리로 구현)

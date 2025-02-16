@@ -9,6 +9,7 @@ from langchain.schema import SystemMessage, HumanMessage, AIMessage
 load_dotenv()
 default_openai_api_key = os.getenv("OPENAI_API_KEY")
 
+
 # OpenAI LLM 초기화
 llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
