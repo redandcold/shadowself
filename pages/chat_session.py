@@ -92,7 +92,7 @@ def save_user_data_to_json(new_user_data, file_path="user_data.json"):
 
 # Streamlit UI 구성
 st.title("💬 사용자의 이야기를 들려주세요.")
-st.caption("🚀 회원가입까지 다른 한 걸음.")
+st.caption("🚀 회원가입까지 다른 한 걸음. 8번 발화할 수 있습니다.")
 
 # Sidebar에서 API Key 입력
 with st.sidebar:
@@ -127,47 +127,52 @@ for msg in st.session_state.chat_history:
 if st.session_state.conversation_done==False:
     # 사용자 입력 처리
     if user_input := st.chat_input("메시지를 입력하세요:"):
-        add_message("user", user_input)
-        st.chat_message("user").write(user_input)
 
-        try:
-            # 대화 내역을 기반으로 메시지 생성
-            messages = [
-                SystemMessage(content=initial_prompt.content)
-            ] + [
-                HumanMessage(content=msg["content"]) if msg["role"] == "user" else AIMessage(content=msg["content"])
-                for msg in st.session_state.chat_history if msg["role"] != "system"
-            ]
+        if len(user_input) > 300:
+            st.warning(f"🚨 입력은 최대 한글 300자까지 가능합니다. {len(user_input)}/300")
+        else:    
+            add_message("user", user_input)
+            st.chat_message("user").write(user_input)
 
-            # LLM 호출
-            llm_response = llm(messages)
-            response_content = llm_response.content
+            try:
+                # 대화 내역을 기반으로 메시지 생성
+                messages = [
+                    SystemMessage(content=initial_prompt.content)
+                ] + [
+                    HumanMessage(content=msg["content"]) if msg["role"] == "user" else AIMessage(content=msg["content"])
+                    for msg in st.session_state.chat_history if msg["role"] != "system"
+                ]
 
-            # 모델 응답 추가
-            add_message("assistant", response_content)
-            st.chat_message("assistant").write(response_content)
-            save_chat_history_to_json()
-            print("대화 기록이 chat_history.json 파일로 저장되었습니다.")
+                # LLM 호출
+                llm_response = llm(messages)
+                response_content = llm_response.content
 
-            if "user_input_count" not in st.session_state:
-                st.session_state.user_input_count=1
-                print("input_count: ",st.session_state.user_input_count)
-            else:
-                st.session_state.user_input_count+=1
-                print("input_count: ",st.session_state.user_input_count)
+                # 모델 응답 추가
+                add_message("assistant", response_content)
+                st.chat_message("assistant").write(response_content)
+                save_chat_history_to_json()
+                print("대화 기록이 chat_history.json 파일로 저장되었습니다.")
+
+                if "user_input_count" not in st.session_state:
+                    st.session_state.user_input_count=1
+                    print("input_count: ",st.session_state.user_input_count)
+                else:
+                    st.session_state.user_input_count+=1
+                    print("input_count: ",st.session_state.user_input_count)
 
 
-            # 대화 종료 메시지 확인
-            if "즐거웠습니다" in response_content:
-                st.session_state.conversation_done = True
-            if st.session_state.user_input_count>5:
-                st.session_state.conversation_done = True
-            
+                # 대화 종료 메시지 확인
+                if "즐거웠습니다" in response_content:
+                    st.session_state.conversation_done = True
+                if st.session_state.user_input_count>=8:
+                    st.info("8회의 크레딧을 모두 사용하였습니다")
+                    st.session_state.conversation_done = True
+                
 
-        except Exception as e:
-            response_content = f"오류가 발생했습니다: {e}"
-            add_message("assistant", response_content)
-            st.chat_message("assistant").write(response_content)
+            except Exception as e:
+                response_content = f"오류가 발생했습니다: {e}"
+                add_message("assistant", response_content)
+                st.chat_message("assistant").write(response_content)
 
 # 대화 종료 후 회원가입 완료 버튼 표시
 if st.session_state.conversation_done:

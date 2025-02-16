@@ -140,47 +140,51 @@ for msg in st.session_state.friend_chat_history:
 if not st.session_state.friend_conversation_done:  # 대화 종료 상태가 아닐 때만 입력 허용
     # 사용자 입력 처리
     if user_input := st.chat_input("메시지를 입력하세요:"):
-        add_message("user", user_input)
-        st.chat_message("user").write(user_input)
 
-        try:
-            # 대화 내역을 기반으로 메시지 생성
-            messages = [
-                SystemMessage(content=initial_prompt.content)
-            ] + [
-                HumanMessage(content=msg["content"]) if msg["role"] == "user" else AIMessage(content=msg["content"])
-                for msg in st.session_state.friend_chat_history if msg["role"] != "system"
-            ]
+        if len(user_input) > 300:
+            st.warning(f"🚨 입력은 최대 한글 300자까지 가능합니다. {len(user_input)}/300")
+        else: 
+            add_message("user", user_input)
+            st.chat_message("user").write(user_input)
 
-            # LLM 호출
-            llm_response = llm(messages)
-            response_content = llm_response.content
+            try:
+                # 대화 내역을 기반으로 메시지 생성
+                messages = [
+                    SystemMessage(content=initial_prompt.content)
+                ] + [
+                    HumanMessage(content=msg["content"]) if msg["role"] == "user" else AIMessage(content=msg["content"])
+                    for msg in st.session_state.friend_chat_history if msg["role"] != "system"
+                ]
 
-            # 모델 응답 추가
-            add_message("assistant", response_content)
-            st.chat_message("assistant").write(response_content)
+                # LLM 호출
+                llm_response = llm(messages)
+                response_content = llm_response.content
 
-            if "user_input_count" not in st.session_state:
-                st.session_state.user_input_count=1
-                print("input_count: ",st.session_state.user_input_count)
-            else:
-                st.session_state.user_input_count+=1
-                print("input_count: ",st.session_state.user_input_count)
+                # 모델 응답 추가
+                add_message("assistant", response_content)
+                st.chat_message("assistant").write(response_content)
 
-            # 대화 종료 메시지 확인
-            if "즐거웠습니다" in response_content:
-                st.session_state.friend_conversation_done = True
-            if st.session_state.user_input_count>=5:
-                st.session_state.friend_conversation_done = True
-                st.info("5회의 크레딧을 모두 사용하였습니다")
-            save_chat_history_to_json()
-            print("대화 기록이 friend_chat_history.json 파일로 저장되었습니다.")
+                if "user_input_count" not in st.session_state:
+                    st.session_state.user_input_count=1
+                    print("input_count: ",st.session_state.user_input_count)
+                else:
+                    st.session_state.user_input_count+=1
+                    print("input_count: ",st.session_state.user_input_count)
+
+                # 대화 종료 메시지 확인
+                if "즐거웠습니다" in response_content:
+                    st.session_state.friend_conversation_done = True
+                if st.session_state.user_input_count>=5:
+                    st.session_state.friend_conversation_done = True
+                    st.info("5회의 크레딧을 모두 사용하였습니다")
+                save_chat_history_to_json()
+                print("대화 기록이 friend_chat_history.json 파일로 저장되었습니다.")
 
 
-        except Exception as e:
-            response_content = f"오류가 발생했습니다: {e}"
-            add_message("assistant", response_content)
-            st.chat_message("assistant").write(response_content)
+            except Exception as e:
+                response_content = f"오류가 발생했습니다: {e}"
+                add_message("assistant", response_content)
+                st.chat_message("assistant").write(response_content)
 
 # 디버깅: 상태 출력
 print("=======회원가입 최종 대화 기록 =======")
