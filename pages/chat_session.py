@@ -130,6 +130,7 @@ if st.session_state.conversation_done==False:
 
         if len(user_input) > 300:
             st.warning(f"🚨 입력은 최대 한글 300자까지 가능합니다. {len(user_input)}/300")
+            user_input = user_input[:300]
         else:    
             add_message("user", user_input)
             st.chat_message("user").write(user_input)
