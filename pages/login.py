@@ -23,6 +23,10 @@ pages = {
 # Dropdown to select the page
 selected_page = st.selectbox("Select a page:", list(pages.keys()))
 
+    # 페이지 이동 처리
+if pages[selected_page]:  # 선택된 페이지가 None이 아닐 경우
+    st.switch_page(pages[selected_page])  # switch_page로 이동
+
 # 사용자 데이터베이스 JSON 파일 경로
 USER_DATA_FILE = "user_data.json"
 # 사용자 데이터베이스(간단히 딕셔너리로 구현)

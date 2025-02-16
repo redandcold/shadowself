@@ -117,7 +117,7 @@ def save_chat_history_to_json(file_path="friend_chat_history.json"):
 
 # Streamlit UI 구성
 st.title(f"💬 {selected_person_name}님께 말을 걸어보세요.")
-st.caption("🚀 총 20번 발화할 수 있습니다.")
+st.caption("🚀 총 5번 발화할 수 있습니다.")
 
 
 # 초기 메시지 처리
@@ -160,9 +160,19 @@ if not st.session_state.friend_conversation_done:  # 대화 종료 상태가 아
             add_message("assistant", response_content)
             st.chat_message("assistant").write(response_content)
 
+            if "user_input_count" not in st.session_state:
+                st.session_state.user_input_count=1
+                print("input_count: ",st.session_state.user_input_count)
+            else:
+                st.session_state.user_input_count+=1
+                print("input_count: ",st.session_state.user_input_count)
+
             # 대화 종료 메시지 확인
             if "즐거웠습니다" in response_content:
                 st.session_state.friend_conversation_done = True
+            if st.session_state.user_input_count>=5:
+                st.session_state.friend_conversation_done = True
+                st.info("5회의 크레딧을 모두 사용하였습니다")
             save_chat_history_to_json()
             print("대화 기록이 friend_chat_history.json 파일로 저장되었습니다.")
 
@@ -209,8 +219,10 @@ if st.session_state.friend_conversation_done:
         print(f"{selected_person_name}님이 친구 목록에 추가되었습니다.")
         st.session_state.friend_conversation_done=False
         st.session_state.friend_chat_history = []
+        st.session_state.user_input_count=0
         st.switch_page("pages/friends_list.py")
     if st.button("목록 돌아가기"):
         st.session_state.friend_chat_history = []
         st.session_state.friend_conversation_done=False
+        st.session_state.user_input_count=0
         st.switch_page("pages/people_list.py")
