@@ -108,6 +108,7 @@ if st.session_state["page"] == "login":
                     st.session_state['email']=new_email
                     st.session_state['name']=new_name
                     print(new_password, new_email, new_name)
+                    st.switch_page("pages/chat_session.py")
             else:
                 st.error("모든 필드를 입력해주세요.")
 

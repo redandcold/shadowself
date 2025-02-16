@@ -67,7 +67,7 @@ else:
             # 친구 삭제 버튼
             if st.session_state.get(f"confirm_delete_{friend_email}") == "pending":
                 # 확인 버튼 및 취소 버튼 표시
-                st.warning(f"정말로 {friend_name}님을 삭제하시겠습니까?")
+                st.warning(f"정말로 {friend_name}님을\n삭제하시겠습니까?")
                 confirm_col, cancel_col = st.columns(2)
 
                 with confirm_col:
