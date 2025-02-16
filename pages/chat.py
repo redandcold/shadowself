@@ -137,14 +137,19 @@ for msg in st.session_state.friend_chat_history:
     elif msg["role"] == "assistant":
         st.chat_message("assistant").write(msg["content"])
 
+# 사용자 입력을 세션 상태에 저장
+if "user_input" not in st.session_state:
+    st.session_state.user_input = ""
+
 if not st.session_state.friend_conversation_done:  # 대화 종료 상태가 아닐 때만 입력 허용
     # 사용자 입력 처리
-    if user_input := st.chat_input("메시지를 입력하세요:"):
+    if user_input := st.chat_input("메시지를 입력하세요:", value=st.session_state.user_input):
 
         if len(user_input) > 300:
             st.warning(f"🚨 입력은 최대 한글 300자까지 가능합니다. {len(user_input)}/300")
-            user_input = user_input[:300]
-        else: 
+            st.session_state.user_input = user_input[:300]  # 300자까지만 저장
+        else:
+            st.session_state.user_input = "" 
             add_message("user", user_input)
             st.chat_message("user").write(user_input)
 
