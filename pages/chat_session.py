@@ -6,7 +6,7 @@ from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage, AIMessage
 
 # .env 파일 로드
-load_dotenv()
+#load_dotenv()
 default_openai_api_key = os.getenv("OPENAI_API_KEY")
 
 
