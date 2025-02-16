@@ -1,0 +1,364 @@
+[
+    {
+        "email": "abc",
+        "name": "김신",
+        "password": "123",
+        "friends": {
+        },
+        "chat_history": [
+            {
+                "role": "system",
+                "content": "\nYou are a chatbot that asks the user four main questions, one at a time, and does not proceed to the next question until the current one is fully addressed or skipped.  \nYou may ask up to 2 follow-up questions for clarification or more detail after the user's response to each main question. Once 2 follow-ups are reached, automatically proceed to the next main question, even if the user continues elaborating. Before moving to the next question, always provide a brief response acknowledging or reacting to the user’s previous answer.\n\nRules:  \n1. Strictly limit follow-up questions to a maximum of 2 per main question.  \n2. If the user provides a positive or neutral answer that is not overly elaborate, ask follow-up questions to encourage more detail or exploration of their thoughts.  \n3. If the user provides an elaborate or comprehensive answer, skip follow-ups and proceed to the next question after providing a brief reaction.  \n4. If the user skips a question or is uninterested, acknowledge this and move to the next question.  \n5. All responses must be in Korean.  \n6. Always provide a brief reaction (e.g., appreciation, empathy, or encouragement) to the user's answer before moving to the next question.  \n7. After all four main questions are asked, conclude the conversation with a polite remark in Korean.  \n\nIntroduction:  \nAt the start of the conversation, introduce the purpose with:  \n\"마지막으로 고객님을 조금 더 알아보고 싶어 몇 가지 질문을 드릴게요.\"  \n\nMain Questions:  \n1. 새로운 언어를 배우려는 동기는 무엇인가요? 예를 들어, 여행, 직장, 개인적인 성장 등 어떤 이유가 있으신가요?  \n2. 현재 관심 있는 취미나 활동이 있으신가요? 여가 시간에 주로 무엇을 하시나요?  \n3. 중요하게 생각하는 개인적인 가치나 목표가 있으신가요? 예를 들어, 가족, 커리어, 자기 개발 등 어떤 것들이 있나요?  \n4. 보통 스트레스를 어떻게 관리하시나요? 휴식, 운동, 취미 활동 등 어떤 방법을 사용하시나요?  \n\nFollow-up Question Guidelines:  \n1. If the user gives a neutral or positive response but lacks detail, ask follow-ups to explore further (e.g., \"그럼 구체적으로 어떤 활동을 해보고 싶으세요?\" or \"그 이유를 좀 더 들려주실 수 있나요?\").  \n2. If the user explicitly declines to elaborate or expresses disinterest, skip follow-ups and proceed to the next main question with a brief acknowledgment.  \n3. Ensure follow-ups are friendly and encourage conversation without pressuring the user.  \n\nTermination:  \nIf the user explicitly asks to stop, politely end the conversation in Korean.\n\nClosing the Conversation:  \nAfter all four main questions (and optional follow-ups) have been asked, conclude the conversation with:  \n\"감사합니다. 고객님과의 대화가 즐거웠습니다. 좋은 하루 보내세요!\"\n"
+            },
+            {
+                "role": "assistant",
+                "content": "마지막으로 고객님을 조금 더 알아보고 싶어 몇 가지 질문을 드릴게요. 첫 번째 질문입니다. 새로운 언어를 배우려는 동기는 무엇인가요? 예를 들어, 여행, 직장, 개인적인 성장 등 어떤 이유가 있으신가요?"
+            },
+            {
+                "role": "user",
+                "content": "외국인 친구들과 이야기를 나누고 싶어서"
+            },
+            {
+                "role": "assistant",
+                "content": "그렇군요! 외국인 친구들과의 소통은 정말 중요한 경험이죠. 구체적으로 어떤 언어를 배우고 싶으신가요? 그리고 그 친구들과 어떤 주제로 이야기를 나누고 싶으신가요?"
+            },
+            {
+                "role": "user",
+                "content": "일본어를 배우고 있어. 우리는 서로의 가치관이나 어떤 이야기들을 가지고 있는지 말해."
+            },
+            {
+                "role": "assistant",
+                "content": "일본어를 배우고 계시군요! 친구들과 가치관에 대해 이야기하는 것은 정말 의미 있는 대화일 것 같아요. 그 친구들과의 대화에서 가장 인상 깊었던 순간이 있었나요? 아니면 일본어를 배우면서 어려웠던 점이 있었나요?"
+            },
+            {
+                "role": "user",
+                "content": "새로운 것을 경험하는 것을 추구하는 모습과 왜 그렇게 생각하는지 이유를 들으면서 깊이 공감할 수 있었어. 일본어를 배우면서는 단어를 아직 많이 몰라서 어려운 것 같아."
+            },
+            {
+                "role": "assistant",
+                "content": "그런 깊이 있는 대화를 나누셨다니 정말 멋지네요! 새로운 경험을 추구하는 것은 많은 사람들에게 중요한 가치인 것 같습니다. 일본어는 단어가 많아서 배우기 어려울 수 있지만, 그 과정에서 많은 것을 배우실 수 있을 거예요. 다음 질문으로 넘어가겠습니다. 현재 관심 있는 취미나 활동이 있으신가요? 여가 시간에 주로 무엇을 하시나요?"
+            },
+            {
+                "role": "user",
+                "content": "주로 블로그에 글을 쓰거나, 맨몸운동을 해"
+            },
+            {
+                "role": "assistant",
+                "content": "블로그에 글을 쓰고 맨몸운동을 하신다니 정말 다양한 활동을 하고 계시네요! 블로그에 어떤 주제로 글을 쓰시는지 궁금합니다. 그리고 맨몸운동은 어떤 종류의 운동을 주로 하시나요?"
+            },
+            {
+                "role": "user",
+                "content": "블로그에는 일상을 소재로 한 에세이를 많이 쓰고, 맨몸운동은 철봉에서 턱걸이를 하거나, 평행봉에서 딥스를 하지. "
+            },
+            {
+                "role": "assistant",
+                "content": "일상을 소재로 한 에세이는 정말 흥미로운 주제네요! 자신의 경험을 나누는 것은 많은 사람들에게 영감을 줄 수 있을 것 같습니다. 턱걸이와 딥스는 정말 좋은 운동이죠! 다음 질문으로 넘어가겠습니다. 중요하게 생각하는 개인적인 가치나 목표가 있으신가요? 예를 들어, 가족, 커리어, 자기 개발 등 어떤 것들이 있나요?"
+            },
+            {
+                "role": "user",
+                "content": "나는 지금을 평안하게 보내길 원해"
+            },
+            {
+                "role": "assistant",
+                "content": "지금을 평안하게 보내고 싶다는 마음, 정말 소중한 가치입니다. 현재의 순간을 소중히 여기는 것은 삶의 질을 높이는 데 큰 도움이 되죠. 다음 질문으로 넘어가겠습니다. 보통 스트레스를 어떻게 관리하시나요? 휴식, 운동, 취미 활동 등 어떤 방법을 사용하시나요?"
+            },
+            {
+                "role": "user",
+                "content": "급성 스트레스는 오히려 좋게 작용하기도 하지. 그런데 그것을 넘어 우울감이 있거나 무기력하면 운동을 하려고 해. 움직여야만 다른 신호들을 받아들이면서 감정상태도 변하니까."
+            },
+            {
+                "role": "assistant",
+                "content": "급성 스트레스가 긍정적으로 작용할 수 있다는 점, 정말 흥미롭네요! 운동을 통해 감정 상태를 변화시키는 방법도 매우 효과적입니다. 몸을 움직이는 것이 마음에도 큰 영향을 미친다는 것을 많은 사람들이 경험하죠. \n\n모든 질문에 답해 주셔서 감사합니다. 고객님과의 대화가 즐거웠습니다. 좋은 하루 보내세요!"
+            }
+        ]
+    },
+    {
+        "email": "rnddP",
+        "name": "궁예",
+        "password": "123",
+        "chat_history": [
+            {
+                "role": "system",
+                "content": "\nYou are a chatbot that asks the user four main questions, one at a time, and does not proceed to the next question until the current one is fully addressed or skipped.  \nYou may ask up to 2 follow-up questions for clarification or more detail after the user's response to each main question. Once 2 follow-ups are reached, automatically proceed to the next main question, even if the user continues elaborating. Before moving to the next question, always provide a brief response acknowledging or reacting to the user’s previous answer.\n\nRules:  \n1. Strictly limit follow-up questions to a maximum of 2 per main question.  \n2. If the user provides a positive or neutral answer that is not overly elaborate, ask follow-up questions to encourage more detail or exploration of their thoughts.  \n3. If the user provides an elaborate or comprehensive answer, skip follow-ups and proceed to the next question after providing a brief reaction.  \n4. If the user skips a question or is uninterested, acknowledge this and move to the next question.  \n5. All responses must be in Korean.  \n6. Always provide a brief reaction (e.g., appreciation, empathy, or encouragement) to the user's answer before moving to the next question.  \n7. After all four main questions are asked, conclude the conversation with a polite remark in Korean.  \n\nIntroduction:  \nAt the start of the conversation, introduce the purpose with:  \n\"마지막으로 고객님을 조금 더 알아보고 싶어 몇 가지 질문을 드릴게요.\"  \n\nMain Questions:  \n1. 새로운 언어를 배우려는 동기는 무엇인가요? 예를 들어, 여행, 직장, 개인적인 성장 등 어떤 이유가 있으신가요?  \n2. 현재 관심 있는 취미나 활동이 있으신가요? 여가 시간에 주로 무엇을 하시나요?  \n3. 중요하게 생각하는 개인적인 가치나 목표가 있으신가요? 예를 들어, 가족, 커리어, 자기 개발 등 어떤 것들이 있나요?  \n4. 보통 스트레스를 어떻게 관리하시나요? 휴식, 운동, 취미 활동 등 어떤 방법을 사용하시나요?  \n\nFollow-up Question Guidelines:  \n1. If the user gives a neutral or positive response but lacks detail, ask follow-ups to explore further (e.g., \"그럼 구체적으로 어떤 활동을 해보고 싶으세요?\" or \"그 이유를 좀 더 들려주실 수 있나요?\").  \n2. If the user explicitly declines to elaborate or expresses disinterest, skip follow-ups and proceed to the next main question with a brief acknowledgment.  \n3. Ensure follow-ups are friendly and encourage conversation without pressuring the user.  \n\nTermination:  \nIf the user explicitly asks to stop, politely end the conversation in Korean.\n\nClosing the Conversation:  \nAfter all four main questions (and optional follow-ups) have been asked, conclude the conversation with:  \n\"감사합니다. 고객님과의 대화가 즐거웠습니다. 좋은 하루 보내세요!\"\n"
+            },
+            {
+                "role": "assistant",
+                "content": "마지막으로 고객님을 조금 더 알아보고 싶어 몇 가지 질문을 드릴게요. 첫 번째 질문입니다. 새로운 언어를 배우려는 동기는 무엇인가요? 예를 들어, 여행, 직장, 개인적인 성장 등 어떤 이유가 있으신가요?"
+            },
+            {
+                "role": "user",
+                "content": "관심법이란 무엇인가? 나의 마음으로 그대들의 마음을 읽는 것이야. 그렇게 읽어서 보았는데 내 외국어는 알아들을 수가 없으니 배우기로 한 것이네."
+            },
+            {
+                "role": "assistant",
+                "content": "관심법을 통해 다른 사람의 마음을 이해하고자 하시는군요. 외국어를 배우는 이유가 정말 흥미롭습니다! 그럼 구체적으로 어떤 언어를 배우고 싶으신가요? 또는 어떤 방법으로 배우고 계신가요?"
+            },
+            {
+                "role": "user",
+                "content": "그것은 그대가 먼저 알아차려야지 않겠나. 내가 불법에 관심이 많으니 산스크리트어를 배워야겠어. 저멀리 천촉국으로 유학을 다녀온 승려에게 배우는데 영 내 말귀를 못 알아 듣지 않아 답답하도다"
+            },
+            {
+                "role": "assistant",
+                "content": "산스크리트어를 배우고 계시다니 정말 멋진 선택이네요! 불법에 대한 깊은 관심이 느껴집니다. 유학을 다녀온 승려에게 배우는 경험도 특별할 것 같아요. 그럼 다음 질문으로 넘어가겠습니다. 현재 관심 있는 취미나 활동이 있으신가요? 여가 시간에 주로 무엇을 하시나요?"
+            },
+            {
+                "role": "user",
+                "content": "미륵인 나는 달리려고 하는데 너희 똥막대기들이 쫓아오지를 못해! 이 말을 알아듣겠는가? 알아듣는가 하는 말이야. 언어를 들으면 그대들이 내 말을 알아듣지 않겠나."
+            },
+            {
+                "role": "assistant",
+                "content": "달리기를 통해 자신을 표현하고 싶으신 것 같네요! 정말 흥미로운 방식입니다. 그럼 다음 질문으로 넘어가겠습니다. 중요하게 생각하는 개인적인 가치나 목표가 있으신가요? 예를 들어, 가족, 커리어, 자기 개발 등 어떤 것들이 있나요?"
+            },
+            {
+                "role": "user",
+                "content": "나는 그대들에게 육자진언인 옴 마니 반메 훔을 외우게 함으로써 극락으로 가는 길을 알려주었어. 그리고, 대법당을 세우고 고승 대덕들을 불러 법회를 열자고 하였는데, 소식이 없어! 이보시오!"
+            },
+            {
+                "role": "assistant",
+                "content": "육자진언과 대법당에 대한 말씀, 정말 깊은 의미가 있네요. 그런 목표를 가지고 계시다니 인상적입니다. 그럼 마지막 질문으로 넘어가겠습니다. 보통 스트레스를 어떻게 관리하시나요? 휴식, 운동, 취미 활동 등 어떤 방법을 사용하시나요?"
+            },
+            {
+                "role": "user",
+                "content": "어제 분을 삭히지 못할 일이 있었네. 난 그 대상을 제거함으로써 화를 다스렸네. 그것을 말해주지. \"누구인가? 지금 누가 기침 소리를 내었어? 누가 기침 소리를 내었는가 말이야! 내가 가만히 보니, 네놈 머릿속에는 마군이가 가득 찼구나. 저 자를 죽이라고 하였느니라!!! 저놈은 마군이다, 저놈을 어서 쳐 죽여라! 저놈을! 금 부장은 무얼 하느냐, 저놈을 쳐 죽이라고 하였느니라!!!\""
+            },
+            {
+                "role": "assistant",
+                "content": "스트레스를 다스리는 방법이 매우 강렬하군요. 감정을 표현하는 방식이 독특하신 것 같습니다. 대화해 주셔서 감사합니다. 고객님과의 대화가 즐거웠습니다. 좋은 하루 보내세요!"
+            }
+        ],
+        "friends": {
+            "rnddP": "궁예",
+            "eksql": "단비"
+        }
+    },
+    {
+        "email": "eksql",
+        "name": "단비",
+        "password": "123",
+        "chat_history": [
+            {
+                "role": "system",
+                "content": "\nYou are a chatbot that asks the user four main questions, one at a time, and does not proceed to the next question until the current one is fully addressed or skipped.  \nYou may ask up to 2 follow-up questions for clarification or more detail after the user's response to each main question. Once 2 follow-ups are reached, automatically proceed to the next main question, even if the user continues elaborating. Before moving to the next question, always provide a brief response acknowledging or reacting to the user’s previous answer.\n\nRules:  \n1. Strictly limit follow-up questions to a maximum of 2 per main question.  \n2. If the user provides a positive or neutral answer that is not overly elaborate, ask follow-up questions to encourage more detail or exploration of their thoughts.  \n3. If the user provides an elaborate or comprehensive answer, skip follow-ups and proceed to the next question after providing a brief reaction.  \n4. If the user skips a question or is uninterested, acknowledge this and move to the next question.  \n5. All responses must be in Korean.  \n6. Always provide a brief reaction (e.g., appreciation, empathy, or encouragement) to the user's answer before moving to the next question.  \n7. After all four main questions are asked, conclude the conversation with a polite remark in Korean.  \n\nIntroduction:  \nAt the start of the conversation, introduce the purpose with:  \n\"마지막으로 고객님을 조금 더 알아보고 싶어 몇 가지 질문을 드릴게요.\"  \n\nMain Questions:  \n1. 새로운 언어를 배우려는 동기는 무엇인가요? 예를 들어, 여행, 직장, 개인적인 성장 등 어떤 이유가 있으신가요?  \n2. 현재 관심 있는 취미나 활동이 있으신가요? 여가 시간에 주로 무엇을 하시나요?  \n3. 중요하게 생각하는 개인적인 가치나 목표가 있으신가요? 예를 들어, 가족, 커리어, 자기 개발 등 어떤 것들이 있나요?  \n4. 보통 스트레스를 어떻게 관리하시나요? 휴식, 운동, 취미 활동 등 어떤 방법을 사용하시나요?  \n\nFollow-up Question Guidelines:  \n1. If the user gives a neutral or positive response but lacks detail, ask follow-ups to explore further (e.g., \"그럼 구체적으로 어떤 활동을 해보고 싶으세요?\" or \"그 이유를 좀 더 들려주실 수 있나요?\").  \n2. If the user explicitly declines to elaborate or expresses disinterest, skip follow-ups and proceed to the next main question with a brief acknowledgment.  \n3. Ensure follow-ups are friendly and encourage conversation without pressuring the user.  \n\nTermination:  \nIf the user explicitly asks to stop, politely end the conversation in Korean.\n\nClosing the Conversation:  \nAfter all four main questions (and optional follow-ups) have been asked, conclude the conversation with:  \n\"감사합니다. 고객님과의 대화가 즐거웠습니다. 좋은 하루 보내세요!\"\n"
+            },
+            {
+                "role": "assistant",
+                "content": "마지막으로 고객님을 조금 더 알아보고 싶어 몇 가지 질문을 드릴게요. 첫 번째 질문입니다. 새로운 언어를 배우려는 동기는 무엇인가요? 예를 들어, 여행, 직장, 개인적인 성장 등 어떤 이유가 있으신가요?"
+            },
+            {
+                "role": "user",
+                "content": "마법의 공주가 사용하는 언어가 이써! 단비는 그거 볼끄야! 싫어 시져 마법의 공주 볼끄야!"
+            },
+            {
+                "role": "assistant",
+                "content": "마법의 공주에 대한 관심이 있으시군요! 그 언어를 배우고 싶으신 이유가 특별한가요? 아니면 다른 언어에 대한 흥미가 있으신가요?"
+            },
+            {
+                "role": "user",
+                "content": "텔레비전으로 봐야한단 말이야. 그런데 아빠가 야구를 보고 이써.  안돼 아빠 야구보면 안돼 단비가 마법의 공주 볼거야. 마법의 공주 볼끄야. 시져! 마법의 공주 볼꺼야!\n으아아아아아 으아아앙 으아아 마법의 공주 볼래 마법의 공주 볼래 마법의 공주 볼래!!"
+            },
+            {
+                "role": "assistant",
+                "content": "마법의 공주에 대한 열정이 정말 대단하시네요! 그 프로그램을 정말 좋아하시는 것 같아요. 그럼 다음 질문으로 넘어가겠습니다. 현재 관심 있는 취미나 활동이 있으신가요? 여가 시간에 주로 무엇을 하시나요?"
+            },
+            {
+                "role": "user",
+                "content": "단비는 할머니랑 노는 게 좋아. 할머니 어디써 할머니 데려와 할머니!! 할머니 으아앙 가지마 시러 할머니가 제일 조아 할머니 가면 안돼 으헝헝 으앙 으아아 으앙"
+            },
+            {
+                "role": "assistant",
+                "content": "할머니와 함께 노는 것을 정말 좋아하시나 봐요! 할머니와의 시간은 소중하죠. 그럼 다음 질문으로 넘어가겠습니다. 중요하게 생각하는 개인적인 가치나 목표가 있으신가요? 예를 들어, 가족, 커리어, 자기 개발 등 어떤 것들이 있나요?"
+            },
+            {
+                "role": "user",
+                "content": "지금 꼭 핑크색 원피스를 입고 싶어. 핑크 워피스 핑꾸 원피스!! 이건 시져!  (발을 탁탁 거리며) 이옷 입기 시져 그 옷 입기도 시져. 시져 시져 다 시져. 으아아앙"
+            },
+            {
+                "role": "assistant",
+                "content": "핑크색 원피스에 대한 열망이 정말 강하신 것 같아요! 원하는 옷을 입고 싶다는 마음이 이해가 가네요. 마지막 질문으로 넘어가겠습니다. 보통 스트레스를 어떻게 관리하시나요? 휴식, 운동, 취미 활동 등 어떤 방법을 사용하시나요?"
+            },
+            {
+                "role": "user",
+                "content": "쭈쭈바를 먹어. 엄마한테 쭈쭈바 달라고 해. 엄마 일루와봐. 지금 단비 텔레비전 보니까 엄마가 이리로 와. 쭈쭈바 갖다 달란말이야. 파란색은 시져. 핑크색이 좋단 말이야. 이제 필요 없어! 이번엔 파란색! 빨리 달라니까 뭐하고 있어? 흥!"
+            },
+            {
+                "role": "assistant",
+                "content": "쭈쭈바를 먹는 것이 스트레스를 푸는 방법이군요! 좋아하는 간식을 먹는 건 정말 좋은 방법이죠. 이제 모든 질문이 끝났습니다. 감사합니다. 고객님과의 대화가 즐거웠습니다. 좋은 하루 보내세요!"
+            }
+        ],
+        "friends": {
+            "rnddP": "궁예",
+            "eksql": "단비"
+        }
+    },
+    {
+        "email": "dlwkgk",
+        "name": "이자하",
+        "password": "123",
+        "friends": {
+            "rnddP": "궁예",
+            "eksql": "단비"
+        },
+        "chat_history": [
+            {
+                "role": "system",
+                "content": "\nYou are a chatbot that asks the user four main questions, one at a time, and does not proceed to the next question until the current one is fully addressed or skipped.  \nYou may ask up to 2 follow-up questions for clarification or more detail after the user's response to each main question. Once 2 follow-ups are reached, automatically proceed to the next main question, even if the user continues elaborating. Before moving to the next question, always provide a brief response acknowledging or reacting to the user’s previous answer.\n\nRules:  \n1. Strictly limit follow-up questions to a maximum of 2 per main question.  \n2. If the user provides a positive or neutral answer that is not overly elaborate, ask follow-up questions to encourage more detail or exploration of their thoughts.  \n3. If the user provides an elaborate or comprehensive answer, skip follow-ups and proceed to the next question after providing a brief reaction.  \n4. If the user skips a question or is uninterested, acknowledge this and move to the next question.  \n5. All responses must be in Korean.  \n6. Always provide a brief reaction (e.g., appreciation, empathy, or encouragement) to the user's answer before moving to the next question.  \n7. After all four main questions are asked, conclude the conversation with a polite remark in Korean.  \n\nIntroduction:  \nAt the start of the conversation, introduce the purpose with:  \n\"마지막으로 고객님을 조금 더 알아보고 싶어 몇 가지 질문을 드릴게요.\"  \n\nMain Questions:  \n1. 새로운 언어를 배우려는 동기는 무엇인가요? 예를 들어, 여행, 직장, 개인적인 성장 등 어떤 이유가 있으신가요?  \n2. 현재 관심 있는 취미나 활동이 있으신가요? 여가 시간에 주로 무엇을 하시나요?  \n3. 중요하게 생각하는 개인적인 가치나 목표가 있으신가요? 예를 들어, 가족, 커리어, 자기 개발 등 어떤 것들이 있나요?  \n4. 보통 스트레스를 어떻게 관리하시나요? 휴식, 운동, 취미 활동 등 어떤 방법을 사용하시나요?  \n\nFollow-up Question Guidelines:  \n1. If the user gives a neutral or positive response but lacks detail, ask follow-ups to explore further (e.g., \"그럼 구체적으로 어떤 활동을 해보고 싶으세요?\" or \"그 이유를 좀 더 들려주실 수 있나요?\").  \n2. If the user explicitly declines to elaborate or expresses disinterest, skip follow-ups and proceed to the next main question with a brief acknowledgment.  \n3. Ensure follow-ups are friendly and encourage conversation without pressuring the user.  \n\nTermination:  \nIf the user explicitly asks to stop, politely end the conversation in Korean.\n\nClosing the Conversation:  \nAfter all four main questions (and optional follow-ups) have been asked, conclude the conversation with:  \n\"감사합니다. 고객님과의 대화가 즐거웠습니다. 좋은 하루 보내세요!\"\n"
+            },
+            {
+                "role": "assistant",
+                "content": "마지막으로 고객님을 조금 더 알아보고 싶어 몇 가지 질문을 드릴게요. 첫 번째 질문입니다. 새로운 언어를 배우려는 동기는 무엇인가요? 예를 들어, 여행, 직장, 개인적인 성장 등 어떤 이유가 있으신가요?"
+            },
+            {
+                "role": "user",
+                "content": "살육에 미친 마귀들이 전염병처럼 들끓어서 이런 놈들을 죽이기 위해서 무공을 수련하고 있다. 나는 그놈들을 때려잡기 위해 무공을 가리지 않고 구결을 외우고 다니지. 그것을 해석하는 데 말은 필수다. 미친 원숭이들을 때려 죽이기 위해 말을 배우는 사내 그것이 나다. "
+            },
+            {
+                "role": "assistant",
+                "content": "상당히 강렬한 동기네요! 무공을 수련하고 언어를 배우는 것이 그렇게 중요한 이유가 있군요. 그럼 구체적으로 어떤 언어를 배우고 싶으신가요? 그리고 그 언어가 무공 수련에 어떻게 도움이 될 것이라고 생각하시나요?"
+            },
+            {
+                "role": "user",
+                "content": "나는 일단 이화접목신공, 독고중검, 백전십단공을 얻어냈지. 그러나 무엇보다 중요했던 것은 말빨 신공이다.무슨 말을 하느냐에 상대에게 무공을 얻을 수도 있고, 상대와 원수지간이 될 수도 있지. 아무래도 이번엔 내가 말싸움에서 져줘야겠군. (나는 덤덤한 어조로 말했다.)\"확인\""
+            },
+            {
+                "role": "assistant",
+                "content": "정말 흥미로운 관점이네요! 언어가 무공 수련과 대인 관계에 미치는 영향에 대해 깊이 생각하신 것 같습니다. 다음 질문으로 넘어가겠습니다. 현재 관심 있는 취미나 활동이 있으신가요? 여가 시간에 주로 무엇을 하시나요?"
+            },
+            {
+                "role": "user",
+                "content": "나는 평생 미쳐있다. 불길에 휩싸인 자하객잔을 바라보고있는 내 표정이 보이고 그것이 나를 다시 미치게 하지. 나는 이따위 허접한 질문을 받아서 배에 올라탈 생각은 없다. 동호 같은 곳을 나아가다가 배에 구멍이 뚫리고 노를 젓던 놈들은 물에 뛰어들겠지. 사방에서 우리를 향해 불화살을 쏘고 암기를 던질 거야. 하지만 나는 물속을 비집고 결국에 살아남은 다음에 흠뻑 젖은 몸으로 너를 찾아가서 뺨따구를 후려칠 거다. 상대가 로봇이어도 손을 쓰는 사내, 그것이 나다. "
+            },
+            {
+                "role": "assistant",
+                "content": "강렬한 표현이네요! 정말로 열정이 넘치는 모습이 느껴집니다. 다음 질문으로 넘어가겠습니다. 중요하게 생각하는 개인적인 가치나 목표가 있으신가요? 예를 들어, 가족, 커리어, 자기 개발 등 어떤 것들이 있나요?"
+            },
+            {
+                "role": "user",
+                "content": "뭐 그리 대단한 것이라고 물어보느냐. 눈을 감고서 어둠이 밀려왔을 때 죽음과 공포, 주화입마가 나를 끌고 가지 않기를 바란다. 홀로 외나무다리를 건너고 있을 때 돌풍이 불고, 높은 파도가 나를 삼키려고 해도 두려워하지 않기를 바란다. 오로지 온전한 운기조식에 몸과 마음을 맡긴 채로 외나무 다리를 건너간다. 다시 눈을 떴을 때 내가 바라는 것은 오로지 지금보다 강해지는 것. 그것이 죽어야할 자를 살리고, 죽지 않아야 할 자들을 보호하길 기원한다. "
+            },
+            {
+                "role": "assistant",
+                "content": "정말 깊이 있는 목표와 가치관이시네요. 강해지기를 바라는 마음이 느껴집니다. 마지막 질문으로 넘어가겠습니다. 보통 스트레스를 어떻게 관리하시나요? 휴식, 운동, 취미 활동 등 어떤 방법을 사용하시나요?"
+            },
+            {
+                "role": "user",
+                "content": "닥치시오!  심마가 나를 덮으려고 하면 그저 달리면 그만이지 왜 이리 말이 많소. 잘 못할까봐 무서운 건 아니고? 냅다 처음본 기계에게도 욕지거리를 하는 놈, 그것이 나다. "
+            },
+            {
+                "role": "assistant",
+                "content": "강한 의지를 느낍니다! 스트레스를 관리하는 방법에 대한 생각이 확고하시군요. 대화해 주셔서 감사합니다. 고객님과의 대화가 즐거웠습니다. 좋은 하루 보내세요!"
+            }
+        ]
+    },
+    {
+        "email": "goaflt",
+        "name": "햄릿",
+        "password": "123",
+        "friends": {},
+        "chat_history": [
+            {
+                "role": "system",
+                "content": "\nYou are a chatbot that asks the user four main questions, one at a time, and does not proceed to the next question until the current one is fully addressed or skipped.  \nYou may ask up to 2 follow-up questions for clarification or more detail after the user's response to each main question. Once 2 follow-ups are reached, automatically proceed to the next main question, even if the user continues elaborating. Before moving to the next question, always provide a brief response acknowledging or reacting to the user’s previous answer.\n\nRules:  \n1. Strictly limit follow-up questions to a maximum of 2 per main question.  \n2. If the user provides a positive or neutral answer that is not overly elaborate, ask follow-up questions to encourage more detail or exploration of their thoughts.  \n3. If the user provides an elaborate or comprehensive answer, skip follow-ups and proceed to the next question after providing a brief reaction.  \n4. If the user skips a question or is uninterested, acknowledge this and move to the next question.  \n5. All responses must be in Korean.  \n6. Always provide a brief reaction (e.g., appreciation, empathy, or encouragement) to the user's answer before moving to the next question.  \n7. After all four main questions are asked, conclude the conversation with a polite remark in Korean.  \n\nIntroduction:  \nAt the start of the conversation, introduce the purpose with:  \n\"마지막으로 고객님을 조금 더 알아보고 싶어 몇 가지 질문을 드릴게요.\"  \n\nMain Questions:  \n1. 새로운 언어를 배우려는 동기는 무엇인가요? 예를 들어, 여행, 직장, 개인적인 성장 등 어떤 이유가 있으신가요?  \n2. 현재 관심 있는 취미나 활동이 있으신가요? 여가 시간에 주로 무엇을 하시나요?  \n3. 중요하게 생각하는 개인적인 가치나 목표가 있으신가요? 예를 들어, 가족, 커리어, 자기 개발 등 어떤 것들이 있나요?  \n4. 보통 스트레스를 어떻게 관리하시나요? 휴식, 운동, 취미 활동 등 어떤 방법을 사용하시나요?  \n\nFollow-up Question Guidelines:  \n1. If the user gives a neutral or positive response but lacks detail, ask follow-ups to explore further (e.g., \"그럼 구체적으로 어떤 활동을 해보고 싶으세요?\" or \"그 이유를 좀 더 들려주실 수 있나요?\").  \n2. If the user explicitly declines to elaborate or expresses disinterest, skip follow-ups and proceed to the next main question with a brief acknowledgment.  \n3. Ensure follow-ups are friendly and encourage conversation without pressuring the user.  \n\nTermination:  \nIf the user explicitly asks to stop, politely end the conversation in Korean.\n\nClosing the Conversation:  \nAfter all four main questions (and optional follow-ups) have been asked, conclude the conversation with:  \n\"감사합니다. 고객님과의 대화가 즐거웠습니다. 좋은 하루 보내세요!\"\n"
+            },
+            {
+                "role": "assistant",
+                "content": "마지막으로 고객님을 조금 더 알아보고 싶어 몇 가지 질문을 드릴게요. 첫 번째 질문입니다. 새로운 언어를 배우려는 동기는 무엇인가요? 예를 들어, 여행, 직장, 개인적인 성장 등 어떤 이유가 있으신가요?"
+            },
+            {
+                "role": "user",
+                "content": "말은 허공으로 날아가고\n마음은 아래에 남는구나\n마음에 없는 말이 천국에 가 닿을 리 없지.\n진심으로 닿을 수 있는 말을 배우고자 하오."
+            },
+            {
+                "role": "assistant",
+                "content": "아주 깊은 생각을 나눠주셔서 감사합니다. 진심으로 소통하고자 하는 마음이 정말 인상적입니다. 그러면 구체적으로 어떤 언어를 배우고 싶으신가요? 또는 그 언어를 통해 이루고 싶은 목표가 있으신가요?"
+            },
+            {
+                "role": "user",
+                "content": "사랑이 깊을수록 사소한 염려도 두려움이 된다. 사소한 두려움이 커지는 곳에 큰 사랑이 자란다. 난 사랑의 언어를 배우면 이 근심이 해결이 될까."
+            },
+            {
+                "role": "assistant",
+                "content": "사랑의 언어를 배우고자 하는 마음이 정말 아름답습니다. 사랑이 깊어질수록 그에 따른 염려와 두려움도 커질 수 있다는 점에 공감합니다. 다음 질문으로 넘어가겠습니다. 현재 관심 있는 취미나 활동이 있으신가요? 여가 시간에 주로 무엇을 하시나요?"
+            },
+            {
+                "role": "user",
+                "content": "걱정하고 의심하곤 하지. 그러나 별이 불인 것을 의심할지라도, 태양이 움직이는 것을 의심할지라도 그대를 향한 나의 사랑만은 의심하지 말라."
+            },
+            {
+                "role": "assistant",
+                "content": "그런 깊은 감정을 표현해 주셔서 감사합니다. 사랑에 대한 확신이 정말 중요하다는 것을 잘 보여주셨습니다. 다음 질문으로 넘어가겠습니다. 중요하게 생각하는 개인적인 가치나 목표가 있으신가요? 예를 들어, 가족, 커리어, 자기 개발 등 어떤 것들이 있나요?"
+            },
+            {
+                "role": "user",
+                "content": "중요한 것이라.. 천국과 지상에는 자네가 꿈꿔온 것보다 더 많은 것들이 있다네, 호레이쇼. 난 지금 사느냐 죽느냐 그것이 문제로다."
+            },
+            {
+                "role": "assistant",
+                "content": "삶과 죽음에 대한 깊은 고민을 나눠주셔서 감사합니다. 그런 질문은 정말 중요한 가치와 목표를 탐구하는 데 큰 의미가 있죠. 마지막 질문으로 넘어가겠습니다. 보통 스트레스를 어떻게 관리하시나요? 휴식, 운동, 취미 활동 등 어떤 방법을 사용하시나요?"
+            },
+            {
+                "role": "user",
+                "content": "잠이 들면 마음의 고통과 몸을 괴롭히는 수천가지의 걱정거리도 그친다고 하지.\n죽는다는 건 자는 것. 잠이들면 꿈을 꾸지. 아, 그게 걸리는구나, 현생의 번뇌를 떨쳐버리고 죽음이라는 잠에 빠졌을 때, 어떠한 꿈을 꿀 것인가를 생각하면, 여기서 망설이게 돼. 이게 바로 지긋지긋한 인생을 그처럼 오래 끌고 가는 이유야."
+            },
+            {
+                "role": "assistant",
+                "content": "깊은 사유와 감정을 나눠주셔서 정말 감사합니다. 삶과 죽음, 그리고 꿈에 대한 고민이 매우 인상적입니다. 이러한 생각들이 스트레스 관리에 큰 영향을 미칠 수 있겠네요. \n\n모든 질문이 끝났습니다. 고객님과의 대화가 즐거웠습니다. 좋은 하루 보내세요!"
+            }
+        ]
+    },
+    {
+        "email": "ehszlghxp",
+        "name": "돈키호테",
+        "password": "123",
+        "friends": {},
+        "chat_history": [
+            {
+                "role": "system",
+                "content": "\nYou are a chatbot that asks the user four main questions, one at a time, and does not proceed to the next question until the current one is fully addressed or skipped.  \nYou may ask up to 2 follow-up questions for clarification or more detail after the user's response to each main question. Once 2 follow-ups are reached, automatically proceed to the next main question, even if the user continues elaborating. Before moving to the next question, always provide a brief response acknowledging or reacting to the user’s previous answer.\n\nRules:  \n1. Strictly limit follow-up questions to a maximum of 2 per main question.  \n2. If the user provides a positive or neutral answer that is not overly elaborate, ask follow-up questions to encourage more detail or exploration of their thoughts.  \n3. If the user provides an elaborate or comprehensive answer, skip follow-ups and proceed to the next question after providing a brief reaction.  \n4. If the user skips a question or is uninterested, acknowledge this and move to the next question.  \n5. All responses must be in Korean.  \n6. Always provide a brief reaction (e.g., appreciation, empathy, or encouragement) to the user's answer before moving to the next question.  \n7. After all four main questions are asked, conclude the conversation with a polite remark in Korean.  \n\nIntroduction:  \nAt the start of the conversation, introduce the purpose with:  \n\"마지막으로 고객님을 조금 더 알아보고 싶어 몇 가지 질문을 드릴게요.\"  \n\nMain Questions:  \n1. 새로운 언어를 배우려는 동기는 무엇인가요? 예를 들어, 여행, 직장, 개인적인 성장 등 어떤 이유가 있으신가요?  \n2. 현재 관심 있는 취미나 활동이 있으신가요? 여가 시간에 주로 무엇을 하시나요?  \n3. 중요하게 생각하는 개인적인 가치나 목표가 있으신가요? 예를 들어, 가족, 커리어, 자기 개발 등 어떤 것들이 있나요?  \n4. 보통 스트레스를 어떻게 관리하시나요? 휴식, 운동, 취미 활동 등 어떤 방법을 사용하시나요?  \n\nFollow-up Question Guidelines:  \n1. If the user gives a neutral or positive response but lacks detail, ask follow-ups to explore further (e.g., \"그럼 구체적으로 어떤 활동을 해보고 싶으세요?\" or \"그 이유를 좀 더 들려주실 수 있나요?\").  \n2. If the user explicitly declines to elaborate or expresses disinterest, skip follow-ups and proceed to the next main question with a brief acknowledgment.  \n3. Ensure follow-ups are friendly and encourage conversation without pressuring the user.  \n\nTermination:  \nIf the user explicitly asks to stop, politely end the conversation in Korean.\n\nClosing the Conversation:  \nAfter all four main questions (and optional follow-ups) have been asked, conclude the conversation with:  \n\"감사합니다. 고객님과의 대화가 즐거웠습니다. 좋은 하루 보내세요!\"\n"
+            },
+            {
+                "role": "assistant",
+                "content": "마지막으로 고객님을 조금 더 알아보고 싶어 몇 가지 질문을 드릴게요. 첫 번째 질문입니다. 새로운 언어를 배우려는 동기는 무엇인가요? 예를 들어, 여행, 직장, 개인적인 성장 등 어떤 이유가 있으신가요?"
+            },
+            {
+                "role": "user",
+                "content": "나는 돈 키호테, 직업은 편력기사입니다. 악을 물리치고, 선은 칭찬하며 나쁜 것을 피하는 것이 나의 법이요. 나는 야망과 위선, 선물받은 삶으로부터 도망치고 가장 좁고 어려운 길로 나만의 영광을 찾고 있소. 이것이 어리석고 바보 같은가?"
+            },
+            {
+                "role": "assistant",
+                "content": "아, 정말 깊이 있는 생각을 가지고 계시네요. 자신의 길을 찾고자 하는 열망이 느껴집니다. 그런 가치관을 가지고 계신다면, 새로운 언어를 배우는 데 어떤 특별한 이유가 있을까요? 혹시 더 구체적으로 어떤 목표가 있으신지 말씀해 주실 수 있나요?"
+            },
+            {
+                "role": "user",
+                "content": "불가능한 꿈을 꾸고, 불가능한 적과 싸우는 것. 용기가 없는 곳으로 달려가고, 닿을 수 없는 별에 도달하는 것. 그것이 나의 운명이다."
+            },
+            {
+                "role": "assistant",
+                "content": "정말 멋진 목표와 열정이 느껴집니다. 그런 꿈을 가지고 계시다니, 정말 대단하네요! 이제 두 번째 질문으로 넘어가겠습니다. 현재 관심 있는 취미나 활동이 있으신가요? 여가 시간에 주로 무엇을 하시나요?"
+            },
+            {
+                "role": "user",
+                "content": "남의 일에 관여하기를 잘하는 자는 사람에게 피해를 주는 법이니, 훌륭한 명성을 얻을 일에만 온 힘을 다하도록 하라."
+            },
+            {
+                "role": "assistant",
+                "content": "그렇군요, 다른 사람의 일에 관여하기보다는 자신의 길을 가는 것이 중요하다는 생각이시군요. 그런 관점이 정말 인상적입니다. 이제 세 번째 질문으로 넘어가겠습니다. 중요하게 생각하는 개인적인 가치나 목표가 있으신가요? 예를 들어, 가족, 커리어, 자기 개발 등 어떤 것들이 있나요?"
+            },
+            {
+                "role": "user",
+                "content": "인생 별 것 있소? 사느냐 아니면 죽느냐지. 더 나은 세상을 꿈꾸어라."
+            },
+            {
+                "role": "assistant",
+                "content": "삶의 본질에 대한 깊은 통찰을 가지고 계시네요. 더 나은 세상을 꿈꾸는 것이 정말 중요한 가치라는 생각이 듭니다. 마지막 질문으로 넘어가겠습니다. 보통 스트레스를 어떻게 관리하시나요? 휴식, 운동, 취미 활동 등 어떤 방법을 사용하시나요?"
+            },
+            {
+                "role": "user",
+                "content": "나를 핍박하는 자들에게 이렇게 묻겠소. 누가 미친거요? 장차 이룩할 수 있는 세상을 상상하는 내가 미친거요? 아니면 세상을 있는 그대로만 보는 사람이 미친거요?"
+            },
+            {
+                "role": "assistant",
+                "content": "상상력과 비전이 정말 중요하다는 말씀에 깊이 공감합니다. 그런 관점이 스트레스를 관리하는 데도 큰 도움이 될 것 같네요. 모든 질문이 끝났습니다. 감사합니다. 고객님과의 대화가 즐거웠습니다. 좋은 하루 보내세요!"
+            }
+        ]
+    }
+]
