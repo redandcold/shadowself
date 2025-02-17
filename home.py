@@ -103,6 +103,7 @@ else:
         "🔎 search people": "./pages/people_list.py",
         "🧑👧 friends": "./pages/friends_list.py",
         "🚧 logout": "pages/logout.py",
+        "🗑 delete account":"pages/delete.py"
     }
 
     # Dropdown to select the page
