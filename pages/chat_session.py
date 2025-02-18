@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import streamlit as st
 from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage, AIMessage
+import subprocess
 
 # .env 파일 로드
 load_dotenv()
@@ -89,6 +90,15 @@ def save_user_data_to_json(new_user_data, file_path="user_data.json"):
     # 업데이트된 데이터를 다시 파일에 저장
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(user_data, f, ensure_ascii=False, indent=4)
+
+# Git 커밋 & 푸시
+def commit_and_push(email):
+    try:
+        subprocess.run(["git", "add", USER_DATA_FILE], check=True)
+        subprocess.run(["git", "commit", "-m", f"Update user data_{email}"], check=True)
+        subprocess.run(["git", "push", "release", "head:main"], check=True)  # main 브랜치에 push
+    except Exception as e:
+        print("Git 동기화 실패:", e)
 
 # Streamlit UI 구성
 st.title("💬 사용자의 이야기를 들려주세요.")
@@ -184,6 +194,7 @@ if st.session_state.conversation_done:
         }
         print(user_data)
         save_user_data_to_json(user_data)
+        commit_and_push(st.session_state.get("email"))
         st.session_state.chat_history = []  # 대화 기록 초기화
         st.session_state.conversation_done = False  # 상태 초기화
         st.session_state["page"] = "login"  # 메인 페이지로 전환
