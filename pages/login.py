@@ -51,6 +51,9 @@ def authenticate(email, password):
         for user in user_db:
             if user["email"] == email and user["password"] == password:
                 return user['name'], True
+            else:
+                st.error("이메일 또는 비밀번호가 잘못되었습니다.")
+                print("user_data에 입력한 데이터가 없는경우")
     return False
 
 # 페이지 상태 초기화
