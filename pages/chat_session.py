@@ -94,9 +94,10 @@ def save_user_data_to_json(new_user_data, file_path="user_data.json"):
 # Git 커밋 & 푸시
 def commit_and_push(email):
     try:
-        subprocess.run(["git", "add", USER_DATA_FILE], check=True)
+        subprocess.run(["git", "add", "user_data.json"], check=True)
         subprocess.run(["git", "commit", "-m", f"Update user data_{email}"], check=True)
         subprocess.run(["git", "push", "release", "head:main"], check=True)  # main 브랜치에 push
+        print("user_data.json 업데이트 완료!")
     except Exception as e:
         print("Git 동기화 실패:", e)
 
